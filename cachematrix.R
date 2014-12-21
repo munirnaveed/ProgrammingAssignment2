@@ -21,11 +21,14 @@
 makeCacheMatrix <- function(x = matrix())  {
         m <- NULL
         set <- function(y) {
-                x <<- y
+                x <<- y           
                 m <<- NULL
         }
         get <- function() x
+        
+        #Set Cache Value
         setinv <- function(inv) m <<- inv
+        #Get Cache value
         getinv <- function() m
         list(set = set, get = get,
              setinv = setinv,
